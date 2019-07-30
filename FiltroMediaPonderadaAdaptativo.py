@@ -14,7 +14,7 @@ import cv2
 import math
 import copy
 
-def principal():
+def principal(nome):
     #variaveis auxiliares
     max_janela = 39.0
     
@@ -26,7 +26,7 @@ def principal():
     
     #realiza leitura da imagem ruidosa, seleciona apenas um canal 
     #replica as bordas da imagem ruidosa e copia para outra variavel
-    img_entrada = cv2.imread("Lena_noise.png")
+    img_entrada = cv2.imread(nome)
     img = img_entrada[:,:,0]
     img = cv2.copyMakeBorder(img,piso,piso,piso,piso,cv2.BORDER_REPLICATE)
     
@@ -94,6 +94,7 @@ def percorre_janela(janela,max_j,s):
     return lista[0], lista[len(lista)-1], ponderada
 
 if __name__ == '__main__':
-    principal()
+    nome = "Lena_noise.png"
+    principal(nome)
     print("\n FIM!!")
     
