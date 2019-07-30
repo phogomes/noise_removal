@@ -7,7 +7,7 @@ publicado em: IEEE SIGNAL PROCESSING LETTERS
 
 
 Autor do codigo: Paulo Henrique de Oliveira Gomes
-email: phdeoliveiragomes@gmail.com 
+
 '''
 import numpy as np
 import cv2
